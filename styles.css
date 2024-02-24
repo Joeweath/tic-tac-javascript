@@ -1,8 +1,14 @@
+:root {
+    --box-size: calc(500px / 3);
+}
+
+body {
+    box-sizing: border-box;
+}
+
 h1 {
     text-align: center;
 }
-
-
 
 #game-board {
     border: 2px solid black;
@@ -10,12 +16,20 @@ h1 {
     width: 500px;
     height: 500px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .tic-box {
     border: 2px solid black;
+    text-align: center;
+    font-size: 100px;
+    width: calc(var(--box-size) - 4px);
+    height: calc(var(--box-size) - 4px);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
+
 
 #display {
     text-align: center;
